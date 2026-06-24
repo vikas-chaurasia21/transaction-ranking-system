@@ -161,9 +161,9 @@ or run with Live Server.
 
 ## 📸 Screenshots
 
-- Transaction Dashboard
-- User Summary
-- Ranking Leaderboard
+### Dashboard
+
+![Dashboard](./screenshots/dashboard.png)
 
 ## 👨‍💻 Author
 
