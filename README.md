@@ -165,9 +165,8 @@ or run with Live Server.
 - User Summary
 - Ranking Leaderboard
 
-(Add screenshots here)
 
----
+
 
 ## 👨‍💻 Author
 
