@@ -1,37 +1,56 @@
 # 🚀 Transaction Ranking System
 
-A full-stack Transaction Ranking System built using Node.js, Express.js, MongoDB, and Vanilla JavaScript. The system processes user transactions, calculates user scores, prevents duplicate transaction requests using idempotency keys, and generates a dynamic ranking leaderboard.
+A full-stack **Transaction Ranking System** built with **Node.js, Express.js, MongoDB Atlas, and Vanilla JavaScript**. The application processes financial transactions, prevents duplicate requests using **Idempotency Keys**, calculates user scores, and generates a real-time ranking leaderboard. The project is deployed on **Vercel** with **MongoDB Atlas** as the cloud database.
 
 ---
 
-## 📌 Features
+## 🌐 Live Demo
 
-- Process Credit and Debit Transactions
-- Auto-generated Transaction Reference IDs
-- Duplicate Request Prevention using Idempotency Keys
-- User Summary Dashboard
-- Dynamic Ranking Leaderboard
-- Real-time Score Calculation
-- MongoDB Data Storage
-- REST API Architecture
-- Responsive Modern Dashboard UI
+**Live Application:**
+https://transaction-ranking-system-lja61vj0x-vv21.vercel.app/
+
+**GitHub Repository:**
+https://github.com/vikas-chaurasia21/transaction-ranking-system
+
+---
+
+## ✨ Features
+
+* Process Credit & Debit Transactions
+* User Summary Dashboard
+* Dynamic Ranking Leaderboard
+* Real-Time Score Calculation
+* Duplicate Transaction Prevention using Idempotency Keys
+* RESTful API Architecture
+* MongoDB Atlas Cloud Database
+* Responsive Dashboard UI
+* Full Stack Deployment on Vercel
 
 ---
 
 ## 🛠 Tech Stack
 
 ### Frontend
-- HTML5
-- CSS3
-- JavaScript
+
+* HTML5
+* CSS3
+* Vanilla JavaScript
 
 ### Backend
-- Node.js
-- Express.js
+
+* Node.js
+* Express.js
+* REST APIs
 
 ### Database
-- MongoDB Atlas
-- Mongoose
+
+* MongoDB Atlas
+* Mongoose ODM
+
+### Deployment
+
+* Vercel
+* MongoDB Atlas
 
 ---
 
@@ -39,6 +58,9 @@ A full-stack Transaction Ranking System built using Node.js, Express.js, MongoDB
 
 ```bash
 transaction-ranking-system/
+│
+├── api/
+│   └── index.js
 │
 ├── Backends/
 │   ├── config/
@@ -48,19 +70,23 @@ transaction-ranking-system/
 │   ├── routes/
 │   ├── utils/
 │   ├── server.js
-│   └── package.json
+│   ├── package.json
+│   └── .gitignore
 │
 ├── Frontends/
 │   ├── index.html
 │   ├── style.css
 │   └── script.js
 │
+├── screenshots/
+├── package.json
+├── vercel.json
 └── README.md
 ```
 
 ---
 
-## 🔗 API Endpoints
+## 🔗 REST API Endpoints
 
 ### Process Transaction
 
@@ -68,7 +94,7 @@ transaction-ranking-system/
 POST /api/transaction
 ```
 
-Request:
+Request Body
 
 ```json
 {
@@ -87,7 +113,7 @@ Request:
 GET /api/summary/:userId
 ```
 
-Example:
+Example
 
 ```http
 GET /api/summary/vikas
@@ -95,7 +121,7 @@ GET /api/summary/vikas
 
 ---
 
-### Get Ranking
+### Get Ranking Leaderboard
 
 ```http
 GET /api/ranking
@@ -103,23 +129,21 @@ GET /api/ranking
 
 ---
 
-## 🧠 Score Calculation
+## 🧠 Ranking Logic
 
-The user score is calculated based on:
+The ranking score is calculated using:
 
-```text
-Credits
-Debits
-Transaction Count
-```
+* Total Credits
+* Total Debits
+* Number of Transactions
 
-Higher activity and transaction value result in a higher ranking score.
+Users with higher transaction activity receive a higher ranking score.
 
 ---
 
 ## 🔒 Duplicate Transaction Prevention
 
-The project uses Idempotency Keys to prevent duplicate transaction processing.
+Each transaction is protected using an **Idempotency Key**.
 
 Example:
 
@@ -127,35 +151,44 @@ Example:
 vikas-5000-credit
 ```
 
-If the same request is sent again, the system rejects it as a duplicate transaction.
+Duplicate requests with the same key are rejected to prevent duplicate transaction processing.
 
 ---
 
 ## ⚙️ Installation
 
-Clone Repository
+Clone the repository
 
 ```bash
 git clone https://github.com/vikas-chaurasia21/transaction-ranking-system.git
 ```
 
-Backend Setup
+Install dependencies
 
 ```bash
 cd Backends
 npm install
+```
+
+Create a `.env` file
+
+```env
+MONGO_URI=your_mongodb_connection_string
+```
+
+Run the backend
+
+```bash
 npm run dev
 ```
 
-Frontend
-
-Open:
+Open the frontend
 
 ```text
 Frontends/index.html
 ```
 
-or run with Live Server.
+or run using **Live Server**.
 
 ---
 
@@ -165,11 +198,17 @@ or run with Live Server.
 
 ![Dashboard](./screenshots/dashboard.png)
 
+---
+
 ## 👨‍💻 Author
 
 **Vikas Chaurasia**
 
-B.Tech CSE | Full Stack & Software Development Enthusiast
+B.Tech CSE | Full Stack Developer | Software Engineering Enthusiast
 
-GitHub:
-https://github.com/vikas-chaurasia21
+* GitHub: https://github.com/vikas-chaurasia21
+* LinkedIn: https://www.linkedin.com/in/vikas-chaurasia-86765b211/
+
+---
+
+⭐ If you found this project useful, consider giving it a **Star** on GitHub.
