@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "node Backends/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.2",
+    "mongoose": "^9.7.1"
+  }
+}
