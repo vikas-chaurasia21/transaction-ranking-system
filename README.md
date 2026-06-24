@@ -165,9 +165,6 @@ or run with Live Server.
 - User Summary
 - Ranking Leaderboard
 
-
-
-
 ## 👨‍💻 Author
 
 **Vikas Chaurasia**
